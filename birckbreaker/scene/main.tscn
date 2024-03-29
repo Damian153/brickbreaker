@@ -1,12 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1agd88ievu3i"]
+[gd_scene load_steps=4 format=3 uid="uid://c1agd88ievu3i"]
 
 [ext_resource type="PackedScene" uid="uid://ccr48bisy6cex" path="res://scene/bar.tscn" id="1_lscm0"]
-[ext_resource type="PackedScene" uid="uid://cf2j4fw18aooe" path="res://scene/ball.tscn" id="2_fk2lj"]
+[ext_resource type="PackedScene" uid="uid://dgfxc32hyy2r1" path="res://scene/bila.tscn" id="2_fk2lj"]
+[ext_resource type="PackedScene" uid="uid://3fx8bb4v6qcy" path="res://scene/wall.tscn" id="3_44v0w"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_lscm0")]
-position = Vector2(562, 569)
+position = Vector2(462, 579)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_fk2lj")]
-position = Vector2(480, 536)
+position = Vector2(380, 546)
+
+[node name="Area2D" parent="." instance=ExtResource("3_44v0w")]
+position = Vector2(13, 359)
+rotation = 1.5708
+
+[node name="Area2D" parent="Area2D" instance=ExtResource("3_44v0w")]
+position = Vector2(2.99995, -754)
+
+[node name="Area2D2" parent="Area2D" instance=ExtResource("3_44v0w")]
+position = Vector2(-350, -378)
+rotation = 1.5708
+
+[node name="Area2D" parent="Area2D/Area2D2" instance=ExtResource("3_44v0w")]
+position = Vector2(-6.10352e-05, -702)

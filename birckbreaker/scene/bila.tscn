@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgfxc32hyy2r1"]
+
+[ext_resource type="Script" path="res://scene/bila.gd" id="1_xferr"]
+[ext_resource type="Texture2D" uid="uid://bx5wru80i8ean" path="res://sprites/Emerald-green-painted-swatch_circle.webp" id="2_uiwa8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f1cfs"]
+radius = 16.0
+
+[node name="ball" type="CharacterBody2D"]
+script = ExtResource("1_xferr")
+
+[node name="Emerald-green-painted-swatchCircle" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 2.38419e-07)
+scale = Vector2(0.0810367, 0.0810367)
+texture = ExtResource("2_uiwa8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f1cfs")
